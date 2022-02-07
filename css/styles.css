@@ -4,7 +4,7 @@
 } 
 *{
     font-family:  'Nunito', sans-serif;
-    margin:0; padding:0;
+    margin:1px; padding:40px;
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
@@ -20,14 +20,14 @@ html{
      font-size: 62.5%;
      overflow-x: hidden;
      scroll-behavior: smooth;
-     scroll-padding-top: 6rem;
+     scroll-padding-top: 2rem;
 }
 
 body{
     background: #75f0db;
 }
 section{
-    padding: 2rem 9%;
+    padding: 5rem 10%;
 
 }
 .heading{
@@ -39,14 +39,17 @@ section{
 .heading span{
      color: var(--red);
 }
+.paragraph{
+    text-align: center;
+}
 .btn{
     display: inline-block;
-    padding:.8rem 3rem;
-    border:2rem solid var(--red);
-    color:var(--red);
+    padding: .4rem 4rem;
+    border: 0.5rem solid var(--red);
+    color: var(--balck);
     cursor: pointer;
     font-size: 1.7rem;
-    border-radius:5 rem;
+    border-radius: 2rem;
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -55,10 +58,10 @@ section{
 .btn::before{
     content:'';
     position: absolute;
-    top:0; right:0;
+    top: 0; right: 0;
     width: 100px;
     height: 100%;
-    background:var(--red);
+    background: var(--lightblue);
     transition: .3s linear; 
     z-index: -1;
 }
@@ -71,8 +74,8 @@ header{
     align-items: center;
     justify-content: space-between; 
     background: #fff;
-    padding: 2rem 9%;
-    box-shadow: 0 .5rem 1 rgba(0,0,0,0.l);
+    padding: 2rem 20%;
+    box-shadow: 0 .5rem 1 rgb(141, 72, 124);
 } 
 header .logo{
     font-size: 2.5rem;
@@ -97,7 +100,7 @@ header .navbar a:hover{
     font-size: 3 rem;
     cursor: pointer;
     color: #666;
-    border: .1rem solid#666;
+    border: .1rem solid #666;
     border-radius: .3rem;
     padding: 2rem 0.5rem;
     display: none; 
@@ -107,10 +110,13 @@ header .navbar a:hover{
     flex:1 1 40rem;
     flex-wrap: wrap;
     gap: 1.5rem;
-    min-height: 100vh;
+    min-height: 60%;
     align-items: right;
-    background:url(..cut.png) no-repeat;
+    background: url(..cut.png) no-repeat;
     background-position: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    
 
 }
 .home .content{
@@ -124,8 +130,6 @@ header .navbar a:hover{
     padding: 1rem;
     animation: float 3s linear infinite; 
 }
-
-
 @keyframes float {
     0%, 100%{
         transform: tanslateY(0rem);
@@ -143,7 +147,7 @@ header .navbar a:hover{
 .home .content p{
     font-size: 1.7rem;
     color: #666;
-    padding: 1rem 0%;
+    padding: 2rem 0%;
 }
 
 .speciality .box-container{
@@ -155,8 +159,8 @@ header .navbar a:hover{
     flex: 1 1 30rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
-    border:1rem solid rgba(0,0,0,.3);
+    box-shadow: 0.5rem 1rem rgba(0,0,0, .1);
+    border: 1rem solid rgba(0,0,0,.3);
     cursor: pointer;
     border-radius: .5rem;
 }
@@ -180,11 +184,11 @@ header .navbar a:hover{
 .speciality .box-container .box .content{
     text-align: center;
     background: #fff;
-    padding: 2rem;
+    padding: 7rem;
 }
 
 .speciality .box-container .box .content img{
-    margin:1.5rem 0;
+    margin: 1.5rem 0;
     width: 40px;
     height: 30px;
 }
@@ -203,29 +207,31 @@ header .navbar a:hover{
     top:0;
 }
 .speciality .box-container .box:hover .content{
-    transform:translateY(100%);
+    transform: translateY(100%);
 }
-popular .box-container{
+.popular .box-container{
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 .popular .box-container .box{
-    padding: 2rem;
+    padding: 0.5rem;
     background: #fff;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     border: .1rem solid rgba(0,0,0, .3);
     border-radius: .5rem;
     text-align: center;
-    flex:1 1 30rem;
+    flex: 1 1 30rem;
     position: relative;
+    height: 50rem;
+    width: 30rem;
 }
 
 .popular .box-container .box img{
-    height: 25rem;
+    height: 30rem;
     object-fit: cover;
     width: 100%; 
-    border-radius: .5rem;
+    border-radius: .20rem;
 }
 
 .popular .box-container .box .price{
@@ -236,6 +242,8 @@ popular .box-container{
     font-size: 2rem;
     padding: 5rem 1rem;
     border-radius: .5rem;
+    height: 0.5rem;
+    width: 10rem;
 }
 
 .popular .box-container .box h3{
@@ -419,8 +427,10 @@ popular .box-container{
 }
 
 .order .row form .btn:hover{
-    background:var(--red);
+    background: var(--red);
 }
+
+.footer .share
 
 
 
@@ -475,4 +485,54 @@ popular .box-container{
 
 .order .row form .inputBox input{
     width: 100%;
+}
+.footer .share{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .credit{
+    padding: 2.5rem 1rem;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem;
+
+}
+
+.footer .credit span{
+    color:var(--red);
+}
+
+#scroll-top{
+    position: fixed;
+    top: -100%;
+    right: 2rem;
+    padding: 5rem 1rem;
+    font-size: 4rem;
+    background:var(--red);
+    color: #fff;
+    border-radius: .5rem;
+    transition: .5s linear;
+    z-index: 1000;
+}
+
+#scroll-top.active{
+    top:calc(100% -12rem);
+}
+
+.footer .credit span{
+    color: var(--red);
+}
+
+#scroll-top{
+    position: fixed;
+    top: 120%;
+    right: 2rem;
+    padding: .5rem 1.5rem;
+    background: var(--red);
+    color: #fff;
+    border-radius: .5rem;
+    transition: 1s linear;   
 }
